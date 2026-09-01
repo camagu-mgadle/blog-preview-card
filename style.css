@@ -4,14 +4,25 @@
   box-sizing: border-box;
 }
 
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --hover: rgb(0 0 0 / 0.1);
+  --gray: hsl(0, 0%, 42%);
+  --footer: hsl(0, 0%, 7%);
+  --blue: hsl(228, 45%, 44%);
+  --padding: clamp(1rem, 2.5vw, 2.5rem);
+}
+
 @font-face {
   font-family: "Figtree";
   src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
 }
 
 body {
-  background: hsl(47, 88%, 63%);
-  font-family: "figtree";
+  background: var(--yellow);
+  font-family: "figtree", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -21,52 +32,53 @@ body {
 }
 
 article {
-  background: hsl(0, 0%, 100%);
-  max-width: 370px;
+  background: var(--white);
+  max-width: 25rem;
   width: 100%;
-  border: 0.1em solid black;
-  border-radius: 15px;
-  padding: 1rem;
-  box-shadow: 6px 8px 0px black;
+  border: 0.1em solid var(--black);
+  border-radius: 1rem;
+  padding: var(--padding);
+  box-shadow: 6px 8px 0px var(--black);
   margin-inline: auto;
 }
 
 article:hover {
   transform: translate(-3px);
   box-shadow:
-    0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
+    0 10px 15px -3px var(--hover),
+    0 4px 6px -4px var(--hover);
 }
 
-#header-info img {
+.header-info-img {
   width: 100%;
   height: auto;
-  border-radius: 15px;
+  border-radius: 1rem;
   display: block;
 }
 
 h1 {
-  background: hsl(47, 88%, 63%);
+  font-size: 1rem;
+  background: var(--yellow);
   display: inline-block;
   padding: 3px 6px;
   border-radius: 3px;
-  margin-top: 15px;
+  margin-inline-start: 1rem;
 }
 
 p {
-  font-size: 16px;
-  margin: 15px 0 14px;
+  font-size: 1rem;
+  margin: 1rem 0 1rem;
 }
-#main-info p {
-  font-size: 16px;
-  color: hsl(0, 0%, 42%);
+.main-info p {
+  font-size: 1rem;
+  color: var(--gray);
   font-weight: 500;
 }
 
 .card-footer {
   display: flex;
   align-items: center;
-  color: hsl(0, 0%, 7%);
+  color: var(--footer);
   font-weight: 800;
   gap: 10px;
 }
@@ -74,8 +86,8 @@ p {
 .attribution {
   font-size: 0.8rem;
   text-align: center;
-  color: #000;
+  color: var(--black);
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--blue);
 }
