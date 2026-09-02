@@ -8,11 +8,11 @@
   --yellow: hsl(47, 88%, 63%);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
-  --hover: rgb(0 0 0 / 0.1);
+  --hover1: rgb(0 0 0 / 0.1);
   --gray: hsl(0, 0%, 42%);
   --footer: hsl(0, 0%, 7%);
   --blue: hsl(228, 45%, 44%);
-  --padding: clamp(1rem, 2.5vw, 2.5rem);
+  --onerem: clamp(1rem, 2.5vw, 2.5rem);
 }
 
 @font-face {
@@ -36,17 +36,17 @@ article {
   max-width: 25rem;
   width: 100%;
   border: 0.1em solid var(--black);
-  border-radius: 1rem;
-  padding: var(--padding);
+  border-radius: var(--onerem);
+  padding: var(--onerem);
   box-shadow: 6px 8px 0px var(--black);
-  margin-inline: auto;
 }
 
 article:hover {
-  transform: translate(-3px);
+  transform: translate(-0.625rem);
+  transition: transform 0.3s ease-in-out;
   box-shadow:
-    0 10px 15px -3px var(--hover),
-    0 4px 6px -4px var(--hover);
+    0 0.625rem var(--onerem) 0 var(--hover),
+    0 4px 6px 0em var(--hover);
 }
 
 .header-info-img {
@@ -57,20 +57,20 @@ article:hover {
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: var(--onerem);
   background: var(--yellow);
   display: inline-block;
-  padding: 3px 6px;
-  border-radius: 3px;
-  margin-inline-start: 1rem;
+  padding: 0.1875rem 0.375rem;
+  border-radius: 0.1875rem;
+  margin-top: var(--onerem);
 }
 
 p {
-  font-size: 1rem;
-  margin: 1rem 0 1rem;
+  font-size: var(--onerem);
+  margin: var(--onerem) 0 var(--onerem);
 }
 .main-info p {
-  font-size: 1rem;
+  font-size: var(--onerem);
   color: var(--gray);
   font-weight: 500;
 }

@@ -47,7 +47,7 @@ Users should be able to:
 - used an article element instead of using a simple div tag.
 
 ```html:
-<article>Sementic...</article>
+<article>Sementic HTML</article>
 ```
 
 - Used the font face property on the body.
